@@ -1,0 +1,8 @@
+﻿<h1>Delete role</h1>
+
+@using (Html.BeginForm("Remove", "Role", FormMethod.Post))
+{
+    @Html.DropDownList("roleId", (List<SelectListItem>)ViewData["Roles"], "---")
+    <br />
+    <button>Delete</button>
+}

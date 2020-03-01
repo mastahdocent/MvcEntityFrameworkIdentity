@@ -1,0 +1,14 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    @Html.ActionLink("zarządzanie rolami", "Index", "Role")
+    <br />
+    @Html.ActionLink($"wyloguj {User.Identity.Name}", "Logout", "Account")
+}
+else
+{
+    @Html.ActionLink("rejestracja", "Register", "Account")
+    <br />
+    @Html.ActionLink("logowanie", "Login", "Account")
+}
+
+

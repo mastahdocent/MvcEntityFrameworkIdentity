@@ -1,0 +1,19 @@
+﻿@model LoginViewModel
+
+<h1>Log in</h1>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Login)
+    @Html.TextBoxFor(x => x.Login)
+    <br />
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    <br />
+    @Html.LabelFor(x => x.RememberMe)
+    @Html.CheckBoxFor(x => x.RememberMe)
+    <br />
+    <button>Log in</button>
+    <br />
+    @Html.ValidationSummary()
+}

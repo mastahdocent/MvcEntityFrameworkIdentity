@@ -1,0 +1,10 @@
+﻿<h1>Add role</h1>
+
+@using (Html.BeginForm("Add", "Role", FormMethod.Post))
+{
+    <p>Nazwa roli:</p>
+    @Html.TextBox("roleName")
+    <br />
+    <button>Dodaj</button>
+    @Html.ValidationSummary()
+}

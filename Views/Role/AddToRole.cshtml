@@ -1,0 +1,11 @@
+﻿<h1>Add user to role</h1>
+
+@using (Html.BeginForm("AddToRole", "Role", FormMethod.Post))
+{
+    <p>Role:</p>
+    @Html.DropDownList("roleId", (List<SelectListItem>)ViewData["Roles"], "---")
+    <p>User:</p>
+    @Html.DropDownList("userId", (List<SelectListItem>)ViewData["Users"], "---")
+    <br />
+    <button>Add</button>
+}

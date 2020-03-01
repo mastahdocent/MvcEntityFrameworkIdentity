@@ -1,0 +1,27 @@
+﻿@model List<IdentityRole>
+
+<h1>Roles management</h1>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+    </tr>
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td>
+                @role.Id
+            </td>
+            <td>
+                @role.Name
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("add role", "Add", "Role")
+<br />
+@Html.ActionLink("delete role", "Remove", "Role")
+<br />
+@Html.ActionLink("add user to role", "AddToRole", "Role")
